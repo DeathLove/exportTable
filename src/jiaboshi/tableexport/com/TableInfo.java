@@ -18,7 +18,7 @@ public class TableInfo {
     public static void main(String[] args) throws Exception {
         TableInfo tableInfo = new TableInfo();
         tableInfo.initConnection("com.mysql.jdbc.Driver",
-                "jdbc:mysql://10.6.11.25:3306/luobo?zeroDateTimeBehavior=convertToNull", "root", "Hangzhou@123");
+                "url", "use", "password");
     }
 
     public Map<String, Object> getTableInfo(String ip, String post, String database, String username, String password) {
@@ -26,7 +26,6 @@ public class TableInfo {
 
         TableInfo tableInfo = new TableInfo();
         try {
-            // jdbc:mysql://10.6.11.25:3306/luobo?zeroDateTimeBehavior=convertToNull
             String url = "jdbc:mysql://" + ip + ":" + post + "/" + database + "?zeroDateTimeBehavior=convertToNull";
             tableInfo.initConnection("com.mysql.jdbc.Driver", url, username, password);
 
