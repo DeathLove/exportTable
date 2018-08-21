@@ -21,7 +21,7 @@ public class Main {
             String username = props.getProperty("jdbc.user");
             String password = props.getProperty("jdbc.password");*/
             TableInfo tableInfo = new TableInfo();
-            Map<String, Object> map = tableInfo.getTableInfo("10.6.11.25", "3306", "lse_home_dev", "root", "Hangzhou@123");
+            Map<String, Object> map = tableInfo.getTableInfo("ip", "port", "database", "user", "password@123");
 
             ExportDatabaseInfo info = new ExportDatabaseInfo();
             info.createDoc(map, "testDoc", "E:\\table.doc");
